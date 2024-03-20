@@ -1,0 +1,215 @@
+/* Resetting default margin and padding */
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #141f2d; /* Dark blue background */
+  color: #fff; /* White text color */
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Header styles */
+header {
+  background-color: #0e1621; /* Darker blue for header */
+  padding: 20px 0;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+header h1 img {
+  margin-right: 10px; /* Add some space between the image and the text */
+}
+
+nav {
+  background-color: #0e1621; /* Darker blue for nav */
+  display: flex;
+  justify-content: space-between; /* Center all elements except right-side */
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Right side of navigation (login and signup) */
+.nav-right {
+  display: flex; /* Allow buttons to be side-by-side */
+}
+
+.nav-right a {
+  margin-right: 100px;
+}
+
+
+.navItem a:hover {
+  color: gold;
+  font-family: Arial, sans-serif;
+}
+
+.navItem a {
+  font-family: Arial, sans-serif;
+  color: white;
+  text-decoration: none;
+  margin: 0 10px; /* Reduce the margin here */
+  font-weight: 700;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+
+/* Search bar styles */
+.search-bar {
+  /* Can be removed if search bar is not centered */
+  margin-left: auto;
+  text-align: center;
+  display: flex; /* Ensure input and button are on the same line */
+}
+
+.search-bar input[type="text"] {
+  padding: 0px;
+  border: none;
+  border-radius: 15px;
+  width: 250px;
+  height: 40px;
+  font-size: 14px;
+  position: absolute;
+  right: 125px;
+}
+
+.search-bar button[type="submit"] {
+  padding: 5px 10px;
+  background-color: #1E90FF; /* Adjust color as needed */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 14px;
+  width: 80px;
+  height: 40px;
+  position: absolute;
+  right: 30px;
+}
+
+.search-bar button[type="submit"]:hover {
+  background-color: #4682B4; /* Adjust hover color as needed */
+}
+
+/* Dropdown styles */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #0e1621; /* Darker blue for dropdown */
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown-content li {
+  padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Add styles for team sections */
+.team-section {
+  padding: 50px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.mumbai-indians-bg {
+  background-color: #0d68ca; /* Blue background for Mumbai Indians */
+}
+
+.rcb-bg {
+  background-color: #c00404; /* Yellow background for Royal Challengers Bangalore */
+}
+
+.csk-bg {
+  background-color: #a9b80a; /* Red background for Chennai Super Kings */
+}
+
+.team-section h2 {
+  margin-bottom: 20px;
+}
+
+/* Main content styles */
+.main-content {
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* Footer styles */
+footer {
+  background-color: #0e1621; /* Darker blue for footer */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.center-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px; /* Adjust the top margin as needed */
+}
+
+.buy-now-btn {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition-duration: 0.4s;
+}
+
+.buy-now-btn:hover {
+  background-color: #45a049; /* Darker green */
+}
+
+/* Add bigger font size for team headings */
+.team-section h1,
+.team-section h2 {
+  font-size: 36px; /* Adjust the font size as needed */
+}
+
+/* Adjust image size for team sections */
+.team-section img {
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  height: auto; /* Maintain aspect ratio */
+  margin: 20px 0; /* Add margin for spacing */
+}
