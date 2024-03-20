@@ -1,137 +1,57 @@
-const wrapper = document.querySelector(".sliderWrapper");
-const menuItems = document.querySelectorAll(".menuItem");
+// Function to handle search
+function handleSearch() {
+  var searchTerm = document.getElementById("searchInput").value.trim().toLowerCase();
+  // Perform search-related actions
+  if (searchTerm) {
+      console.log("Searching for: " + searchTerm);
+      // Here you can implement further actions, such as fetching search results from a server or displaying search results on the page
+      displaySearchResults(searchTerm); // Example function call to display search results
+  } else {
+      console.log("Please enter a search term.");
+  }
+}
 
-const products = [
-  {
-    id: 1,
-    title: "THE MONSTER KIT",
-    price: 119,
-    colors: [
-      {
-        code: "black",
-        img: "./img/air.png",
-      },
-      {
-        code: "darkblue",
-        img: "./img/air2.png",
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "THE PRIME KIT",
-    price: 149,
-    colors: [
-      {
-        code: "lightgray",
-        img: "./img/jordan.png",
-      },
-      {
-        code: "green",
-        img: "./img/jordan2.png",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "THE GOAT KIT",
-    price: 109,
-    colors: [
-      {
-        code: "lightgray",
-        img: "./img/blazer.png",
-      },
-      {
-        code: "green",
-        img: "./img/blazer2.png",
-      },
-    ],
-  },
-  {
-    id: 4,
-    title: "THE UNDERRATED KIT",
-    price: 129,
-    colors: [
-      {
-        code: "black",
-        img: "./img/crater.png",
-      },
-      {
-        code: "lightgray",
-        img: "./img/crater2.png",
-      },
-    ],
-  },
-  {
-    id: 5,
-    title: "THE NEW CHAPTER KIT",
-    price: 99,
-    colors: [
-      {
-        code: "gray",
-        img: "./img/hippie.png",
-      },
-      {
-        code: "black",
-        img: "./img/hippie2.png",
-      },
-    ],
-  },
-];
+// Function to display search results (example)
+function displaySearchResults(searchTerm) {
+  // Example: Displaying search term in an alert
+  alert("Search results for: " + searchTerm);
+  // You can replace this with actual code to display search results on the page
+}
 
-let choosenProduct = products[0];
+// Function to handle login
+function handleLogin() {
+  // Example: Redirecting to login page
+  window.location.href = "login.html";
+}
 
-const currentProductImg = document.querySelector(".productImg");
-const currentProductTitle = document.querySelector(".productTitle");
-const currentProductPrice = document.querySelector(".productPrice");
-const currentProductColors = document.querySelectorAll(".color");
-const currentProductSizes = document.querySelectorAll(".size");
+// Function to handle signup
+function handleSignup() {
+  // Example: Redirecting to signup page
+  window.location.href = "signup.html";
+}
 
-menuItems.forEach((item, index) => {
-  item.addEventListener("click", () => {
-    //change the current slide
-    wrapper.style.transform = `translateX(${-100 * index}vw)`;
+// Smooth scroll to target section
+function scrollToSection(sectionId) {
+  var section = document.getElementById(sectionId);
+  if (section) {
+      window.scrollTo({
+          top: section.offsetTop,
+          behavior: "smooth"
+      });
+  }
+}
 
-    //change the choosen product
-    choosenProduct = products[index];
-
-    //change texts of currentProduct
-    currentProductTitle.textContent = choosenProduct.title;
-    currentProductPrice.textContent = "$" + choosenProduct.price;
-    currentProductImg.src = choosenProduct.colors[0].img;
-
-    //assing new colors
-    currentProductColors.forEach((color, index) => {
-      color.style.backgroundColor = choosenProduct.colors[index].code;
-    });
+// Add event listener to About links for smooth scrolling
+document.querySelectorAll('.nav-left .dropdown-content a').forEach(function(link) {
+  link.addEventListener('click', function(event) {
+      event.preventDefault();
+      var sectionId = this.getAttribute('href').substring(1);
+      scrollToSection(sectionId);
   });
 });
 
-currentProductColors.forEach((color, index) => {
-  color.addEventListener("click", () => {
-    currentProductImg.src = choosenProduct.colors[index].img;
-  });
-});
 
-currentProductSizes.forEach((size, index) => {
-  size.addEventListener("click", () => {
-    currentProductSizes.forEach((size) => {
-      size.style.backgroundColor = "white";
-      size.style.color = "black";
-    });
-    size.style.backgroundColor = "black";
-    size.style.color = "white";
-  });
-});
-
-const productButton = document.querySelector(".productButton");
-const payment = document.querySelector(".payment");
-const close = document.querySelector(".close");
-
-productButton.addEventListener("click", () => {
-  payment.style.display = "flex";
-});
-
-close.addEventListener("click", () => {
-  payment.style.display = "none";
-});
+// Add event listeners to search button, login link, and signup link
+document.getElementById("searchButton").addEventListener("click", handleSearch);
+document.getElementById("loginLink").addEventListener("click", handleLogin);
+document.getElementById("signupLink").addEventListener("click", handleSignup);
