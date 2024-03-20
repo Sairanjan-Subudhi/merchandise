@@ -17,10 +17,12 @@ body {
   overflow: hidden;
 }
 
-/* Header styles */
 header {
   background-color: #0e1621; /* Darker blue for header */
   padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 header h1 {
@@ -31,94 +33,88 @@ header h1 {
 }
 
 header h1 img {
-  margin-right: 10px; /* Add some space between the image and the text */
+  margin-right: 5px; /* Add some space between the image and the text */
 }
 
+/* Center the text */
+header h1 span {
+  flex-grow: 1; /* Let it take up remaining space */
+  text-align: center;
+}
+
+/* Navbar styles */
 nav {
   background-color: #0e1621; /* Darker blue for nav */
   display: flex;
-  justify-content: space-between; /* Center all elements except right-side */
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
 }
 
 nav ul {
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
   display: flex;
   align-items: center;
 }
 
 nav ul li {
-  margin: 0 10px;
+  margin: 0 15px;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
 
-/* Right side of navigation (login and signup) */
+nav ul li a:hover {
+  color: #1E90FF; /* Light blue on hover */
+}
+
 .nav-right {
-  display: flex; /* Allow buttons to be side-by-side */
+  display: flex;
+  align-items: center;
 }
 
 .nav-right a {
-  margin-right: 100px;
-}
-
-
-.navItem a:hover {
-  color: gold;
-  font-family: Arial, sans-serif;
-}
-
-.navItem a {
-  font-family: Arial, sans-serif;
-  color: white;
+  color: #fff;
   text-decoration: none;
-  margin: 0 10px; /* Reduce the margin here */
-  font-weight: 700;
-  font-size: 16px;
-  transition: all 0.3s ease;
+  margin-right: 15px;
 }
 
+.nav-right a:hover {
+  color: #1E90FF; /* Light blue on hover */
+}
 
 /* Search bar styles */
 .search-bar {
-  /* Can be removed if search bar is not centered */
-  margin-left: auto;
-  text-align: center;
-  display: flex; /* Ensure input and button are on the same line */
+  position: relative;
 }
 
 .search-bar input[type="text"] {
-  padding: 0px;
+  padding: 8px;
   border: none;
   border-radius: 15px;
   width: 250px;
-  height: 40px;
   font-size: 14px;
-  position: absolute;
-  right: 125px;
 }
 
 .search-bar button[type="submit"] {
-  padding: 5px 10px;
-  background-color: #1E90FF; /* Adjust color as needed */
+  padding: 8px 15px;
+  background-color: #1E90FF;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: 5px;
   font-size: 14px;
-  width: 80px;
-  height: 40px;
-  position: absolute;
-  right: 30px;
+  transition: background-color 0.3s ease;
 }
 
 .search-bar button[type="submit"]:hover {
-  background-color: #4682B4; /* Adjust hover color as needed */
+  background-color: #4682B4; /* Darker blue on hover */
 }
 
 /* Dropdown styles */
@@ -154,7 +150,7 @@ nav ul li a {
 }
 
 .csk-bg {
-  background-color: #a9b80a; /* Red background for Chennai Super Kings */
+  background-color: #c0d00d; /* Red background for Chennai Super Kings */
 }
 
 .team-section h2 {
@@ -212,4 +208,9 @@ footer {
   max-width: 100%; /* Ensure the image doesn't exceed its container */
   height: auto; /* Maintain aspect ratio */
   margin: 20px 0; /* Add margin for spacing */
+}
+
+/* Increase size of store title */
+.store-title {
+  font-size: 36px;
 }
