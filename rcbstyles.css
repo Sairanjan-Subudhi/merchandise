@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background-color: #004ba0;
+    background-color: #a00000;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -56,8 +56,8 @@ nav ul li a {
     display: none; /* Hide the dropdown menu by default */
     position: absolute;
     top: 100%; /* Position the dropdown menu below the parent */
-    left: 0;
-    background-color: #004ba0;
+    left: 0;    
+    background-color: #000000;
     z-index: 1; /* Ensure the dropdown menu appears above other content */
 }
 
@@ -82,7 +82,7 @@ main {
 
 /* Styles for product container */
 .product {
-    border: 1px solid #ccc;
+    border: 1px solid #070707;
     border-radius: 5px;
     padding: 20px;
     margin: 55px;
@@ -166,7 +166,7 @@ main {
 
 
 footer {
-    background-color: #004ba0;
+    background-color: #a00000;
     color: #fff;
     text-align: center;
     padding: 10px 0;
