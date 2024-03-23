@@ -2,7 +2,7 @@ const navLinks = document.querySelectorAll('nav ul li a');
 
 navLinks.forEach(link => {
   link.addEventListener('mouseover', () => {
-    link.style.color = '#000'; // Change link color on hover
+    link.style.color = 'gold'; // Change link color on hover
   });
 
   link.addEventListener('mouseout', () => {
