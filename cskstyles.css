@@ -10,8 +10,8 @@ body {
 }
 
 header {
-    background-color: #004ba0;
-    color: #fff;
+    background-color: #ffce0b;
+    color: #000000;
     padding: 20px;
     text-align: center;
 }
@@ -47,7 +47,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     padding: 10px; /* Add padding to the menu items */
 }
